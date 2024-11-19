@@ -47,7 +47,7 @@ const partida = async (id, resultado) => {
   return data;
 };
 
-// Funcion que devuelve un el mini-perfil de un jugador en letify
+// Funcion que devuelve un el mini-perfil de un jugador
 const checkAPI = async () => {
   return await axios
     .get(`https://api.leetify.com/api/mini-profiles/76561197963101144`)
