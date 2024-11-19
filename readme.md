@@ -1,6 +1,6 @@
 Objetivo
 --
-Extraer de usuarios registrados en *leeti* información de rango y partidas usando su **API**.
+Extraer de usuarios registrados en *leeti* información de rango y partidas usando su **API**. El usuario debe tener publico su historial en *leeti*, y tener cuenta en la misma página. 
 ## Funciones
 Ver datos de las últimas partidas mostrando datos como:
 - *mapa*: el que se jugó.
