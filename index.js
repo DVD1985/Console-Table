@@ -4,9 +4,22 @@ const Table = require("cli-table3");
 
 const app = express();
 
+const style = (color) => `text-align: center; font-size: 10em; font-family: fantasy; background: #5ee35e; padding: 100px; color:${color};`;
+
+const rankColors = [
+  { max: 5000, color: "#b0c3d9" },
+  { max: 10000, color: "#8cc6ff" },
+  { max: 15000, color: "#4B69FF" },
+  { max: 20000, color: "#8846FF" },
+  { max: 25000, color: "#FED700" },
+  { max: 30000, color: "#EB4B4B" },
+];
+
+
 app.get("/", async (req, res) => {
   const data = await checkAPI();
-  const contenido = `<div class="">${data.puntosPremier}</div>`;
+  color = rankColors.find(({ max }) => data.puntosPremier <= max)?.color || "#FED700";
+  const contenido = `<div style="${style(color)}">${data.puntosPremier}</div>`;
   res.send(contenido);
 });
 
