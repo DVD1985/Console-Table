@@ -137,7 +137,7 @@ const checkAPI = async () => {
       }
     });
 
-    console.log(table2.toString());
+    console.log(table2.toString())
 
     const primerRangoConocido = ultimasPartidas.find( p => p.rankType  == 11).oldRank || 0;
 
